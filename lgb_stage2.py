@@ -165,7 +165,7 @@ for i in range(5):
         df_all['R_mean'] = df_all[['R39', 'R20', 'R1', 'R23', 'R10', 'R24']].mean(axis=1)
 
         # 入库流量的移动平均
-        df_all['Qi_rolling'] = df_all['Qi'].rolling(window=5, min_periods=1, center=True).mean()
+        df_all['Qi_rolling'] = df_all['Qi']
 
         # 求各种特征的历史值
         for day in [1, 3, 5, 7]:
